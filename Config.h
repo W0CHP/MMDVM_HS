@@ -36,8 +36,6 @@
 // #define D2RG_MMDVM_HS
 // 8) BridgeCom SkyBridge HotSpot
 // #define SKYBRIDGE_HS
-// 9) LoneStar USB Stick ADF7071
-// #define LONESTAR_USB
 
 // Enable ADF7021 support:
 #define ENABLE_ADF7021
