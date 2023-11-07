@@ -26,7 +26,7 @@
 #define VER_MAJOR       "1"
 #define VER_MINOR       "6"
 #define VER_REV         "1"
-#define VERSION_DATE    "20231002_WPSD"
+#define VERSION_DATE    "20231008_WPSD"
 
 #if defined(ZUMSPOT_ADF7021)
 #define BOARD_INFO      "ZUMspot"
@@ -78,6 +78,8 @@
 #endif
 
 #if defined(GITVERSION)
+#define GIT_HASH_SIZE 10
+#define TRUNCATED_GITVERSION (GITVERSION[0:GIT_HASH_SIZE])
 #define concat(a, b) a " GitID #" b ""
 const char HARDWARE[] = concat(DESCRIPTION, GITVERSION);
 #else
