@@ -26,7 +26,7 @@ echo "******************************************************"
 cd ~/MMDVM_HS/
 make clean
 rm -rf bin/*.bin
-git pull
+#git pull
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
