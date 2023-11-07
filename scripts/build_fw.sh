@@ -25,8 +25,7 @@ echo "********* Cleaning objects and updating code *********"
 echo "******************************************************"
 cd ~/MMDVM_HS/
 make clean
-rm -rf bin/*.bin
-git pull
+rm -rf bin/*.bin bin/MD5SUMS.txt
 
 # Download STM32F10X_Lib (only for binary tools)
 if [ ! -d "./STM32F10X_Lib/utils" ]; then
@@ -199,6 +198,6 @@ cp ~/MMDVM_HS/configs/ZUMspot_Libre.h ~/MMDVM_HS/Config.h
 
 cd ~/MMDVM_HS/bin
 md5sum *.bin > MD5SUMS.txt
-#git add .
-#git commit  -a -m 'Updated FW bins'
+git add .
+git commit  -a -m 'Updated FW bins'
 #git push
