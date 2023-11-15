@@ -26,7 +26,7 @@
 #define VER_MAJOR       "1"
 #define VER_MINOR       "6"
 #define VER_REV         "1"
-#define VERSION_DATE    "20231008_WPSD"
+#define VERSION_DATE    "20231115_WPSD"
 
 #if defined(ZUMSPOT_ADF7021)
 #define BOARD_INFO      "ZUMspot"
@@ -46,6 +46,8 @@
 #define BOARD_INFO      "SkyBridge"
 #elif defined(LONESTAR_USB)
 #define BOARD_INFO      "LS_USB_STICK"
+#elif defined(MMDVM_HS_HAT_DVM_EuroNode)
+#define BOARD_INFO      "EuroNode"
 #else
 #define BOARD_INFO      "MMDVM_HS"
 #endif
