@@ -579,7 +579,7 @@ else ifdef SystemRoot
 	echo #define GITVERSION "0000000" > $@
 else
 ifneq ("$(wildcard .git/index)","")
-	echo "#define GITVERSION \"$(shell git rev-parse --short HEAD)\"" > $@
+        echo "#define GITVERSION \"$(shell git rev-parse --short HEAD | cut -c1-10)\"" > $@
 else
 	echo "#define GITVERSION \"0000000\"" > $@
 endif
