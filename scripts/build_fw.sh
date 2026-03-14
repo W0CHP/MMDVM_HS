@@ -56,7 +56,7 @@ echo "********* Building ZUMspot USB firmware *********"
 echo "*************************************************"
 cp ~/MMDVM_HS/configs/ZUMspot_USB.h ~/MMDVM_HS/Config.h
 make -j5 bl
-mv ~/MMDVM_HS/bin/mmdvm_f1bl.bin ~/MMDVM_HS/bin/zumspot_usb_fw.bin
+mv ~/MMDVM_HS/bin/mmdvm_f1bl.hex ~/MMDVM_HS/bin/zumspot_usb_fw.hex
 make clean
 
 # Building ZUMspot Duplex
@@ -207,7 +207,7 @@ make clean
 cp ~/MMDVM_HS/configs/ZUMspot_Libre.h ~/MMDVM_HS/Config.h
 
 cd ~/MMDVM_HS/bin
-md5sum *.bin > MD5SUMS.txt
+md5sum $(ls *.bin *.hex 2>/dev/null) > MD5SUMS.txt
 git add .
 git commit  -a -m 'Updated FW bins'
 #git push
